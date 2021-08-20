@@ -1,0 +1,53 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/Secondary</item>
+        <item name="colorPrimaryDark">@color/Secondary</item>
+        <item name="colorAccent">@color/wallet_holo_blue_light</item>
+    </style>
+
+   <!--
+    <style name="Main" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary</item>
+        <item name="colorAccent">@color/wallet_holo_blue_light</item>
+    </style>-->
+
+    <style name="splashstyle" parent="Theme.AppCompat.Light.NoActionBar">
+      <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+
+    <style name="Radiocolor" parent="Theme.MaterialComponents.Light">
+        <item name="colorAccent">@android:color/background_dark</item>
+    </style>
+    
+    <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:background">@drawable/flag_transparent</item>
+    </style>
+
+    <style name="CollapsedAppbar" parent= "@android:style/TextAppearance.Medium">
+        <item name ="android:textSize">24sp</item>
+        <item name ="android:textColor">@android:color/white</item>
+        <item name ="android:textStyle">normal</item>
+    </style>
+
+    <style name="ExpandedAppbar" parent= "@android:style/TextAppearance.Material.Title">
+        <item name ="android:textColor">@color/colorPrimary</item>
+        <item name ="android:textStyle">normal</item>
+    </style>
+
+    <style name="Bottom_Inactive">
+        <item name="listPreferredItemHeightSmall">40dp</item>
+        <item name="android:textSize"> 15sp </item>
+        <item name="fontFamily"> @font/staatliches_regular </item>
+
+    </style>
+
+</resources>

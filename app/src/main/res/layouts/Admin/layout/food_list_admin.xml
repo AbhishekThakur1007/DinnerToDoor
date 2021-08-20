@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    android:layout_marginBottom="30dp"
+    android:elevation="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Button
+        android:id="@+id/Availability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/cardview_dark_background"
+        android:fontFamily="@font/staatliches_regular"
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        android:text="Available"
+        android:textAlignment="center"
+        android:textColor="@color/White"
+        android:textSize="@dimen/Default_Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/BelowFoo"
+        app:layout_constraintTop_toTopOf="@+id/Availability"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="ExtraText">
+
+        <ImageButton
+            android:id="@+id/Favourites1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/delete_food"
+            android:layout_alignBottom="@+id/delete_food"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/ic_baseline_favorite"
+            android:padding="10dp"
+            android:scaleX="1.6"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageButton
+            android:id="@+id/delete_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/edit_food"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rectangle_white"
+            android:padding="10dp"
+            android:src="@drawable/cross"
+            app:tint="@color/common_google_signin_btn_text_light_pressed"/>
+
+        <ImageButton
+            android:id="@+id/edit_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@+id/Favourites1"
+            android:background="@drawable/rectangle_white"
+            android:padding="10dp"
+            android:src="@drawable/set"
+            app:tint="@color/common_google_signin_btn_text_light_pressed"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ViewLay"
+        app:layout_constraintTop_toBottomOf="@+id/BelowFoo"
+        android:layout_marginBottom="5dp"
+        android:background="@color/quantum_black_text"
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+    <LinearLayout
+        android:id="@+id/aboceLay"
+        app:layout_constraintTop_toBottomOf="@+id/ViewLay"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        tools:ignore="ExtraText">
+
+        //Item 1
+        <ImageView
+            android:id="@+id/foodPhoto"
+            android:layout_weight="1.5"
+            android:layout_width="0dp"
+            android:scaleType="centerCrop"
+            android:layout_height="120dp"
+            android:src="@drawable/download"/>
+
+        <TextView
+            android:id="@+id/foodName"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/patrick_hand"
+            android:gravity="center"
+            android:text="Name of Menu"
+            android:textColor="@color/material_on_background_emphasis_high_type"
+            android:textSize="19sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

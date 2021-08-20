@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/Secondary"
+    android:paddingTop="10dp"
+    tools:ignore="ExtraText">
+
+    //Back
+    <ImageButton
+        android:id="@+id/sign_back_Dialog"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@drawable/back_button_state"
+        android:src="@drawable/arrow_forward"
+        android:rotation="180"
+        android:transitionName="transition_back"
+        app:tint="@color/White"/>
+
+    <ScrollView
+        android:layout_below="@+id/sign_back_Dialog"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:paddingTop="20dp"
+        android:fillViewport="true"
+        android:background="@drawable/profile_down"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="50dp">
+
+            <TextView
+                android:id="@+id/HEadingUpload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="New Category"
+                android:textAlignment="center"
+                android:textColor="@color/material_on_background_emphasis_high_type"
+                android:textSize="@dimen/HeadingDefault_40"
+                android:fontFamily="@font/staatliches_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/NewCatLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_margin="20dp"
+                android:hint="Enter New Category"
+                app:boxStrokeColor="@color/design_default_color_on_secondary"
+                app:boxStrokeWidthFocused="2dp"
+                app:layout_constraintTop_toBottomOf="@+id/HEadingUpload"
+                app:startIconDrawable="@drawable/restaurant_menu"
+                app:startIconTint="@color/design_default_color_on_secondary"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/design_default_color_on_secondary"
+                app:hintTextColor="@color/cardview_dark_background">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/categoryUpload"
+                    android:layout_width="match_parent"
+                    android:cursorVisible="true"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-black"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textColorHint="@color/quantum_grey700" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            //Image Display
+            <TextView
+                android:id="@+id/NoImageSelected"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/NewCatLay"
+                app:layout_constraintStart_toStartOf="@+id/NewCatLay"
+                app:layout_constraintTop_toBottomOf="@+id/NewCatLay"
+                android:background="@drawable/rectangle_white"
+                android:gravity="center"
+                android:textColor="@color/quantum_black_100"
+                android:fontFamily="@font/roboto"
+                android:text="No Image Selected"/>
+
+            <ImageView
+                android:id="@+id/inspect_image"
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:layout_height="250dp"
+                android:scaleType="center"
+                app:layout_constraintEnd_toEndOf="@+id/NewCatLay"
+                app:layout_constraintStart_toStartOf="@+id/NewCatLay"
+                app:layout_constraintTop_toBottomOf="@+id/NewCatLay"/>
+
+            // Select Image
+
+            <Button
+                android:id="@+id/button_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="270dp"
+                android:background="@drawable/button_design"
+                android:elevation="10dp"
+                android:padding="10dp"
+                android:text="Select Image"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/NewCatLay"
+                app:layout_constraintStart_toStartOf="@+id/NewCatLay"
+                app:layout_constraintTop_toBottomOf="@+id/NewCatLay" />
+
+            // Cancel
+            <Button
+                android:id="@+id/No1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button_design"
+                android:elevation="10dp"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp"
+                android:text="Cancel"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="@dimen/Default_Button"
+                app:layout_constraintEnd_toStartOf="@+id/Yes1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_select" />
+
+
+            //Upload
+            <Button
+                android:id="@+id/Yes1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_design"
+                android:elevation="10dp"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp"
+                android:text="Upload"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="@dimen/Default_Button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/No1"
+                app:layout_constraintTop_toTopOf="@+id/No1"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

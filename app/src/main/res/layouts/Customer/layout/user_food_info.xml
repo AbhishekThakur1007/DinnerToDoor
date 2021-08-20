@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/food_Details"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="5dp"
+    android:elevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/pakwaan_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="Dish: "
+            app:layout_constraintEnd_toStartOf="@+id/Barrir6"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/Quan_heading"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/PakwaanUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PAkwaan kaa naam"
+            android:textColor="@color/quantum_black_text"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/pakwaan_heading"
+            app:layout_constraintStart_toEndOf="@+id/Barrir6"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Quan_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantity: "
+            app:layout_constraintEnd_toStartOf="@+id/Barrir6"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pakwaan_heading" />
+
+        <TextView
+            android:id="@+id/Quantity_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/PakwaanUser"
+            android:layout_toEndOf="@+id/Quan_heading"
+            android:text="2"
+            android:textColor="@color/quantum_black_text"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/Quan_heading"
+            app:layout_constraintStart_toEndOf="@+id/Barrir6"
+            app:layout_constraintTop_toBottomOf="@+id/pakwaan_heading" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/Barrir6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="Quan_heading,pakwaan_heading"
+            tools:layout_editor_absoluteX="353dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

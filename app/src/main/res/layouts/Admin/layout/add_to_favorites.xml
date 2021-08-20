@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/dialog_outline"
+    android:padding="20dp"
+    tools:ignore="ExtraText">
+
+    //Heading
+    <TextView
+        android:id="@+id/HeadingLocButton11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:paddingStart="20sp"
+        android:paddingEnd="20sp"
+        android:layout_marginBottom="20dp"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/staatliches_regular"
+        android:text="Add to special items ?"
+        android:textColor="@color/quantum_black_text"
+        android:textSize="30sp"
+        app:drawableStartCompat="@drawable/restaurant_menu"
+        app:drawableTint="@color/quantum_black_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    //Button
+    <Button
+        android:id="@+id/NoSpecial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_design"
+        android:elevation="10dp"
+        android:text="No"
+        android:textColor="@color/design_default_color_surface"
+        android:textSize="@dimen/Default_Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/YesSpecial"
+        android:transitionName="transition_next_btn"
+        app:layout_constraintTop_toBottomOf="@+id/HeadingLocButton11"
+        app:layout_constraintHorizontal_chainStyle="spread"/>
+
+    //Button
+    <Button
+        android:id="@+id/YesSpecial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_design"
+        android:elevation="10dp"
+        android:text="Yes"
+        android:textColor="@color/design_default_color_surface"
+        android:textSize="@dimen/Default_Button"
+        android:transitionName="transition_next_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/NoSpecial"
+        app:layout_constraintTop_toTopOf="@+id/NoSpecial" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

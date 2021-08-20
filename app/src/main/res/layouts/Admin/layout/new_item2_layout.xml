@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="10dp"
+    android:background="@color/Secondary"
+    tools:ignore="ExtraText">
+
+    //Back
+    <ImageButton
+        android:id="@+id/NewItem2"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@drawable/back_button_state"
+        android:src="@drawable/arrow_forward"
+        android:rotation="180"
+        android:transitionName="transition_back"
+        app:tint="@color/White"/>
+
+    //Cancel
+    <ImageButton
+        android:id="@+id/Cancel2"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@drawable/back_button_state"
+        android:src="@drawable/cross"
+        android:rotation="180"
+        android:transitionName="transition_back"
+        app:tint="@color/White"/>
+
+    <ScrollView
+        android:layout_below="@+id/NewItem2"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:paddingTop="30dp"
+        android:fillViewport="true"
+        android:background="@drawable/profile_down"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        android:paddingBottom="50dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_height="wrap_content">
+
+
+        //Heading Des
+        <TextView
+            android:id="@+id/NewHeaing1"
+            android:text="Details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:textSize="40sp"
+            android:fontFamily="@font/staatliches_regular"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:transitionName="transition_title_text"
+            android:textAllCaps="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/design_default_color_on_secondary"/>
+
+        <TextView
+            android:id="@+id/NoItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle_white"
+            android:fontFamily="@font/staatliches_regular"
+            android:gravity="center"
+            android:text="No Variety Added"
+            android:textSize="20sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/NewHeaing1" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="gone"
+            android:background="@color/primary"
+            android:id="@+id/ShowAdded"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/NoItem"/>
+
+        //Second Boundary
+        <View
+            android:id="@+id/bound1"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/ShowAdded"
+            android:background="@color/quantum_grey700"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            tools:layout_editor_absoluteX="373dp" />
+
+        //Add on
+        <TextView
+            android:id="@+id/SizeHead"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/bound1"
+            app:layout_constraintEnd_toStartOf="@+id/barrier3"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text=" Add-On Name:"
+            android:textSize="20sp"
+            android:fontFamily="@font/staatliches_regular"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:transitionName="transition_title_text"
+            android:textAllCaps="true"
+            android:textColor="@color/design_default_color_on_secondary"/>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/SpinnerForSize"
+            app:layout_constraintStart_toEndOf="@+id/barrier3"
+            app:layout_constraintTop_toTopOf="@+id/SizeHead"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/edit_food0"
+            app:layout_constraintBottom_toBottomOf="@+id/SizeHead"
+            android:background="@drawable/button_border_payment"
+            android:layout_alignTop="@+id/SizeHead"
+            android:layout_alignBottom="@+id/SizeHead"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+        //New Size
+        <ImageButton
+            android:layout_alignTop="@+id/SpinnerForSize"
+            android:id="@+id/edit_food0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/SizeHead"
+            app:layout_constraintBottom_toBottomOf="@+id/SizeHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/flag_transparent"
+            android:padding="10dp"
+            android:src="@drawable/pencil"
+            app:tint="@color/common_google_signin_btn_text_light_pressed"/>
+
+        //Second Boundary
+        <ImageView
+            android:id="@+id/bound2"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="14dp"
+            app:layout_constraintTop_toBottomOf="@+id/edit_food0"
+            android:background="@color/quantum_grey700"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
+
+        //Quantity Plate
+        <TextView
+            android:id="@+id/QuantityPlate"
+            app:layout_constraintTop_toBottomOf="@+id/bound2"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/barrier3"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Units / Quantity :"
+            android:textSize="20sp"
+            android:fontFamily="@font/staatliches_regular"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:transitionName="transition_title_text"
+            android:textAllCaps="true"
+            android:textColor="@color/design_default_color_on_secondary"/>
+
+        //Spinner
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/SpinnerQuantity"
+            app:layout_constraintStart_toEndOf="@+id/barrier3"
+            app:layout_constraintTop_toTopOf="@+id/QuantityPlate"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/QuantityPlate"
+            app:layout_constraintEnd_toStartOf="@+id/edit_food2"
+            android:background="@drawable/button_border_payment"
+            android:layout_alignBottom="@+id/QuantityPlate"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+        // Edit
+        <ImageButton
+            android:layout_alignTop="@+id/QuantityPlate"
+            android:id="@+id/edit_food2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/QuantityPlate"
+            app:layout_constraintBottom_toBottomOf="@+id/QuantityPlate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:padding="10dp"
+            android:src="@drawable/pencil"
+            android:background="@drawable/flag_transparent"
+            app:tint="@color/common_google_signin_btn_text_light_pressed"/>
+
+        //Fourth Boundary
+        <View
+            android:id="@+id/bound4"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/QuantityPlate"
+            android:background="@color/quantum_grey700"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
+
+        // Heading Price
+        <TextView
+            android:id="@+id/TypePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/staatliches_regular"
+            android:gravity="center"
+            android:text=" Price :"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="20sp"
+            android:transitionName="transition_title_text"
+            app:layout_constraintEnd_toEndOf="@+id/LayTypePrice"
+            app:layout_constraintStart_toStartOf="@+id/LayTypePrice"
+            app:layout_constraintTop_toBottomOf="@+id/bound4" />
+
+        // Type Price
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/LayTypePrice"
+            app:layout_constraintTop_toBottomOf="@+id/TypePrice"
+            app:layout_constraintEnd_toStartOf="@+id/Guide1"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_height="wrap_content"
+            android:elevation="8dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginTop="8dp"
+            android:hint="Type Price"
+            app:boxStrokeColor="@color/design_default_color_on_secondary"
+            app:boxStrokeWidthFocused="2dp"
+            app:startIconDrawable="@drawable/currency_inr"
+            app:startIconTint="@color/design_default_color_on_secondary"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/design_default_color_on_secondary"
+            app:hintTextColor="@color/cardview_dark_background">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/PriceType"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-black"
+                android:inputType="number"
+                android:maxLength="5"
+                android:imeOptions="actionNext"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textColorHint="@color/quantum_grey700" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        // Heading Discount
+
+        <TextView
+            android:id="@+id/TypeDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/staatliches_regular"
+            android:text="Discount Price:"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="@+id/TypePrice"
+            android:transitionName="transition_title_text"
+            app:layout_constraintEnd_toEndOf="@+id/LayTypeDis"
+            app:layout_constraintStart_toStartOf="@+id/LayTypeDis" />
+
+        // Type Discount
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/LayTypeDis"
+            android:layout_below="@+id/TypeDiscount"
+            android:layout_width="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Guide1"
+            app:layout_constraintTop_toTopOf="@+id/LayTypePrice"
+            android:layout_alignStart="@+id/TypeDiscount"
+            android:layout_alignEnd="@+id/TypeDiscount"
+            android:layout_height="wrap_content"
+            android:elevation="8dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Type Discount Price"
+            app:boxStrokeColor="@color/design_default_color_on_secondary"
+            app:boxStrokeWidthFocused="2dp"
+            app:startIconDrawable="@drawable/currency_inr"
+            app:startIconTint="@color/design_default_color_on_secondary"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/design_default_color_on_secondary"
+            app:hintTextColor="@color/cardview_dark_background">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/DiscountEdit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-black"
+                android:inputType="number"
+                android:maxLength="3"
+                android:imeOptions="actionNext"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textColorHint="@color/quantum_grey700" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/Guide1"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            app:layout_constraintGuide_percent="0.5"
+            android:orientation="vertical"/>
+
+        //Add new
+        <Button
+            android:id="@+id/Add2"
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/LayTypeDis"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_design"
+            android:elevation="10dp"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+            android:text="Add New"
+            android:textAlignment="center"
+            android:textColor="@color/design_default_color_surface"
+            android:textSize="15sp"
+            android:transitionName="transition_next_btn"/>
+
+        // Next Button
+        <Button
+            android:id="@+id/Next2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_design"
+            android:elevation="10dp"
+            android:text="Next"
+            android:layout_marginTop="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/Add2"
+            android:textAlignment="center"
+            android:textColor="@color/design_default_color_surface"
+            android:textSize="15sp"
+            android:transitionName="transition_next_btn"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

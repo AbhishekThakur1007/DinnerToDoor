@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menu_dashboard"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/primary"
+    android:layout_height="match_parent"
+    tools:context=".UserSide.MenuFragment.UserMenuFragment"
+    tools:ignore="ExtraText">
+
+    // Intro Name plus What
+    <RelativeLayout
+        android:id="@+id/IntroLayout"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/IntroLayout1"
+            android:animateLayoutChanges="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/Hi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi,"
+            android:fontFamily="@font/staatliches_regular"
+            android:textColor="@color/quantum_grey700"
+            android:layout_marginEnd="5dp"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/introName"
+            android:layout_toEndOf="@+id/Hi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/staatliches_regular"
+            android:textColor="@color/quantum_grey700"
+            android:textSize="25sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/whatLike"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/IntroLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What would you like to have ? "
+                android:fontFamily="@font/staatliches_regular"
+                android:textColor="@color/places_text_black_alpha_87"
+                android:textSize="20sp"/>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    //Search Bar
+    <RelativeLayout
+        android:id="@+id/SearchAja"
+        android:layout_below="@+id/IntroLayout"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxCornerRadiusTopStart="7dp"
+                app:boxCornerRadiusTopEnd="7dp"
+                app:hintAnimationEnabled="true"
+                app:boxStrokeColor="@color/Secondary"
+                app:hintTextColor="@color/Button"
+                app:boxStrokeWidth="2dp"
+                app:hintEnabled="true"
+                app:boxBackgroundColor="@color/primary"
+                app:boxBackgroundMode="outline"
+                app:startIconDrawable="@drawable/quantum_ic_search_grey600_24"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/SearchBarCat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:hint="Search Category, Food.."
+                    android:textSize="18sp"
+                    android:textColor="@color/places_text_black_alpha_87"
+                    android:fontFamily="@font/roboto"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+
+    //Suggestion List
+    <RelativeLayout
+        android:id="@+id/ListSuggestion"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:background="@drawable/flag_transparent"
+        android:layout_below="@+id/SearchAja"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="10dp"
+            android:id="@+id/SearchContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+    //Category List plus Top Categories
+    <RelativeLayout
+        android:id="@+id/CatLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/SearchAja">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:paddingTop="10dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:clipToPadding="false"
+                android:id="@+id/myView"/>
+
+            //Top Categories Scroll Event handle
+            <com.google.android.material.appbar.AppBarLayout
+                android:paddingTop="4dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:background="@drawable/flag_transparent"
+                android:layout_below="@+id/SearchAja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/LayoutTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    app:layout_scrollFlags="scroll|enterAlways">
+
+                    <TextView
+                        android:id="@+id/TopHead"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Special Items"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/staatliches_regular"
+                        android:textColor="@color/places_text_black_alpha_87"
+                        android:textSize="20sp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_below="@+id/TopHead"
+                        android:id="@+id/TopCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

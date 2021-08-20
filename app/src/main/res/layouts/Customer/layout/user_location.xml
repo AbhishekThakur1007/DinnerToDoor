@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:id="@+id/bottomContainer"
+    android:background="@drawable/round_corners">
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/Heading_loc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textSize="30sp"
+        android:text="Delivery Details"
+        android:gravity="center"/>
+
+        <Button
+            android:id="@+id/allowLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deliver at home"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/Heading_loc"
+            android:elevation="8dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/locationManual"
+            android:text="At your current location"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@+id/allowLocation"
+            android:elevation="8dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/Secondary"
+    android:paddingTop="10dp"
+    tools:ignore="ExtraText">
+
+    //Back
+    <ImageButton
+        android:id="@+id/MemberBack"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@drawable/back_button_state"
+        android:src="@drawable/arrow_forward"
+        android:rotation="180"
+        android:transitionName="transition_back"
+        app:tint="@color/White"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingStart="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="10dp"
+        android:background="@drawable/profile_down"
+        android:layout_below="@+id/MemberBack"
+        android:layout_height="match_parent">
+
+        //Heading
+        <TextView
+            android:id="@+id/MemberHeaing1"
+            android:text="Memebers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="40sp"
+            android:fontFamily="@font/staatliches_regular"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:transitionName="transition_title_text"
+            android:textAllCaps="true"
+            android:textColor="@color/design_default_color_on_secondary"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/MemberHeaing1"
+            android:layout_marginStart="10dp"
+            android:visibility="gone"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/MembersRecycler"/>
+
+        <TextView
+            android:id="@+id/HaiYaaNhi"
+            android:text="No Member"
+            android:layout_below="@+id/MemberHeaing1"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/staatliches_regular"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textColor="@color/quantum_black_text"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

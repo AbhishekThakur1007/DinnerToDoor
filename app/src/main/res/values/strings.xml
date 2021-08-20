@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">Diner to Door</string>
+
+    <!-- Signup -->
+    <string name="heading_login">Indo-Chinese Food Court</string>
+    <string name="Sign_up">Create Account</string>
+    <string name="login">Login</string>
+    <string name="forget_pass">Forgot Password</string>
+    <string name="remember">Remember Me</string>
+    <string name="create">NEW USER ?</string>
+    <string name="username">Enter Username</string>
+    <string name="password">Enter Password</string>
+    <string name="password1">Enter New Password</string>
+    <string name="con_password">Confirm Password</string>
+
+
+    <string name="name">Full Name</string>
+    <string name="email">E-Mail (optional)</string>
+    <string name="phone">Phone Number</string>
+    <string name="next">Next</string>
+
+    <string name="otp"> OTP Code</string>
+    <string name="veri">Verification</string>
+    <string name="enter">Enter one time password sent on </string>
+    <string name="account">Provide Contact no.for OTP</string>
+    <string name="select">Address</string>
+    <string name="detail">to send OTP on one of the following </string>
+    <string name="sms">via sms:</string>
+    <string name="mail">via E-mail:</string>
+    <string name="confirm">Confirm Password</string>
+    <string name="new_cre">New Credentials</string>
+    <string name="ok">Save</string>
+    <string name="pass_updated">Password Updated</string>
+    <string name="cresave">Password Changed</string>
+
+    //Photos String
+    <string name="lock">lock</string>
+    <string name="back">back</string>
+    <string name="pen">pen</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Profile</string>
+    <string name="Staff">Staff</string>
+    <string name="uploadeImage">Change Image</string>
+    <string name="dish_name">Dish Name</string>
+    <string name="place_order">Place Order</string>
+    <string name="confirm_details">Confirm Details</string>
+
+    <string-array name="Names">
+        <item>Pending</item>
+        <item>Accepted</item>
+        <item>Preparing</item>
+        <item>Dispatched</item>
+        <item>Delivered</item>
+    </string-array>
+
+    <!--<string-array name="Units">
+        <item>Kg</item>
+        <item>gm</item>
+        <item>Plate</item>
+    </string-array>-->
+
+</resources>

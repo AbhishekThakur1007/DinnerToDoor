@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/confirmDialog"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@color/White"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingStart="4dp"
+    android:paddingEnd="4dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="ExtraText">
+
+    <TextView
+        android:id="@+id/Confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="@dimen/HeadingDefault_40"
+        android:fontFamily="@font/staatliches_regular"
+        android:gravity="center_horizontal"
+        android:text="Confirm Address"
+        android:textColor="@color/design_default_color_on_secondary"/>
+
+    <ImageView
+        android:id="@+id/Hooo"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:scaleX="1.7"
+        android:scaleY="1.7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/home"
+        app:tint="@color/quantum_black_text" />
+
+    <View
+        android:id="@+id/line"
+        android:src="@color/quantum_black_text"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/Hooo"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"/>
+
+     <TextView
+                android:id="@+id/phonee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@+id/Mobile"
+                app:layout_constraintBottom_toBottomOf="@+id/Mobile"
+                android:layout_marginStart="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/staatliches_regular"
+                android:text="Mobile : "
+                android:textAlignment="center"
+                android:textColor="@color/design_default_color_on_secondary"
+                android:textSize="@dimen/Default_text"/>
+
+    <TextView
+        android:id="@+id/Mobile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/quantum_black_text"
+        app:layout_constraintStart_toEndOf="@+id/barrier5"
+        app:layout_constraintTop_toBottomOf="@+id/line"
+        app:layout_constraintEnd_toStartOf="@+id/MobileEdit"
+        android:background="@drawable/rectangle"
+        android:padding="8dp"
+        android:layout_marginStart="5dp"
+        android:layout_toStartOf="@+id/MobileEdit"
+        android:textSize="19sp"/>
+
+    <ImageView
+        android:id="@+id/MobileEdit"
+        app:tint="@color/Secondary"
+        app:layout_constraintTop_toTopOf="@+id/Mobile"
+        app:layout_constraintBottom_toBottomOf="@+id/Mobile"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pencil"/>
+
+    <TextView
+        android:id="@+id/Addd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="@+id/Address"
+        app:layout_constraintBottom_toBottomOf="@+id/Address"
+        app:layout_constraintTop_toBottomOf="@+id/phonee"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_centerVertical="true"
+        android:fontFamily="@font/staatliches_regular"
+        android:text="Address : "
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="@dimen/Default_text" />
+
+    <TextView
+        android:id="@+id/Address"
+        android:layout_width="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/Mobile"
+        android:layout_marginEnd="15dp"
+        android:textColor="@color/quantum_black_text"
+        android:background="@drawable/rectangle"
+        android:layout_toStartOf="@+id/AddressEdit"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/barrier5"
+        app:layout_constraintEnd_toStartOf="@+id/MobileEdit"
+        android:maxLength="100"
+        android:textSize="20sp"/>
+
+    <ImageView
+        android:id="@+id/AddressEdit"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/Address"
+        app:layout_constraintBottom_toBottomOf="@+id/Address"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pencil"
+        android:layout_marginEnd="10dp"
+        app:tint="@color/Secondary" />
+
+    <Button
+        android:id="@+id/pataConfirm"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_design"
+        android:elevation="10dp"
+        android:layout_marginTop="40dp"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/Address"
+        android:text="Confirm"
+        android:textColor="@color/design_default_color_surface"
+        android:textSize="@dimen/Default_Button"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="Addd,phonee"
+        tools:layout_editor_absoluteX="393dp"
+        tools:layout_editor_absoluteY="10dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

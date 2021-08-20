@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserSide.UserPayment.Payment"
+    android:background="@color/Secondary"
+    android:paddingTop="10dp"
+    tools:ignore="ExtraText">
+
+    //Back
+    <ImageButton
+        android:id="@+id/PayBackButton_back"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@drawable/back_button_state"
+        android:src="@drawable/arrow_forward"
+        android:rotation="180"
+        android:transitionName="transition_back"
+        app:tint="@color/White" />
+
+    <ScrollView
+        android:layout_below="@+id/PayBackButton_back"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:paddingTop="30dp"
+        android:fillViewport="true"
+        android:background="@drawable/profile_down"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        android:paddingBottom="50dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/PaymentHeading"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Payment method"
+            android:textSize="40sp"
+            android:fontFamily="@font/staatliches_regular"
+            android:textAlignment="center"
+            android:textColor="@color/design_default_color_on_secondary"/>
+
+        //GOOGLE PAY
+        <Button
+            android:id="@+id/Google_Button"
+            android:background="@drawable/button_design"
+            android:layout_width="match_parent"
+            android:text="Google Pay"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PaymentHeading"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:shadowColor="@color/design_default_color_on_secondary"
+            android:elevation="8dp"/>
+
+        //UPI ID GPAY
+        <RelativeLayout
+            android:id="@+id/DetailsData"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:animateLayoutChanges="true"
+            app:layout_constraintTop_toBottomOf="@+id/Google_Button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_below="@+id/barGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/GpayLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                android:hint="Enter GPay Id"
+                app:boxStrokeColor="@color/design_default_color_on_secondary"
+                app:boxStrokeWidthFocused="2dp"
+                app:startIconTint="@color/design_default_color_on_secondary"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/design_default_color_on_secondary"
+                app:hintTextColor="@color/cardview_dark_background">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/UPI_ID"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-black"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textColorHint="@color/quantum_grey700" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/GpayLay"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/button_state_default"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/NextGooglePay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_design"
+                    android:text="Pay Now"
+                    android:textSize="20sp"/>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        //COD
+        <Button
+            android:id="@+id/COD_Button"
+            android:background="@drawable/button_design"
+            android:layout_width="match_parent"
+            android:text="Cash on delivery"
+            android:textSize="20sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/DetailsData"
+            android:layout_height="wrap_content"
+            android:shadowColor="@color/design_default_color_on_secondary"
+            android:elevation="8dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+   <!-- <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingStart="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="10dp"
+        android:background="@drawable/profile_down"
+        android:layout_below="@+id/PayBackButton_back"
+        android:layout_height="match_parent">
+
+        //PHONEPe
+        <RelativeLayout
+            android:id="@+id/LayPhonePay"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:background="@drawable/button_state_default"
+            android:layout_below="@+id/DetailsData">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/button_border_payment">
+
+                <ImageView
+                    android:id="@+id/PhonePeLogo"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/phonepe" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/Teer1"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_forward"
+                app:tint="@color/White" />
+
+            <Button
+                android:id="@+id/PhonePe_Button"
+                android:background="@drawable/flag_transparent"
+                android:layout_width="match_parent"
+                android:text="Phone Pe"
+                android:textSize="20sp"
+                android:layout_height="wrap_content"
+                android:shadowColor="@color/design_default_color_on_secondary"
+                android:elevation="8dp"/>
+
+        </RelativeLayout>
+
+        //UPI ID PhonePe
+        <RelativeLayout
+            android:id="@+id/DetailsData1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:layout_below="@+id/LayPhonePay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/PhonePeLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                android:hint="Enter PhonePe Id"
+                app:boxStrokeColor="@color/design_default_color_on_secondary"
+                app:boxStrokeWidthFocused="2dp"
+                app:startIconTint="@color/design_default_color_on_secondary"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/design_default_color_on_secondary"
+                app:hintTextColor="@color/cardview_dark_background">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/UPI_IDPhonePe"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-black"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textColorHint="@color/quantum_grey700" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/PhonePeLay"
+                android:layout_marginTop="10dp"
+                android:animateLayoutChanges="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/button_state_default"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/NextPhonePay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_design"
+                    android:text="Pay Now"
+                    android:textSize="20sp"/>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>-->
+
+</RelativeLayout>

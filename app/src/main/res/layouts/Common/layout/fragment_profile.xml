@@ -1,0 +1,305 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profileView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:orientation="vertical"
+    tools:context=".Common.ProfileFragment.ProfileFragment"
+    tools:ignore="ExtraText">
+
+    //Profile photo
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/EditProfile"
+            android:layout_width="match_parent"
+            android:background="@color/Secondary"
+            android:paddingTop="35dp"
+            android:paddingBottom="35dp"
+            android:layout_height="wrap_content">
+
+            //Profile Image
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/Profileimage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/user"
+                app:civ_border_color="#FFFFFF"
+                app:civ_border_width="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/flag_transparent"
+                android:elevation="8dp"
+                android:padding="10dp"
+                android:scaleX="1.2"
+                android:scaleY="1.2"
+                android:src="@drawable/set"
+                app:layout_constraintBottom_toBottomOf="@+id/Profileimage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Profileimage"
+                app:tint="@color/White" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        //Details
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="165dp"
+            android:fillViewport="true"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/profileinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:elevation="8dp"
+                android:background="@drawable/profile_down">
+
+                //Name
+                <TextView
+                    android:id="@+id/dis_name"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="70dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/staatliches_regular"
+                    android:text="Display"
+                    android:textAlignment="center"
+                    android:textColor="@color/quantum_black_text"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/HeadName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="Name"
+                    android:textAlignment="center"
+                    android:textColor="@color/quantum_black_text"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/dis_name"
+                    app:layout_constraintTop_toBottomOf="@+id/dis_name" />
+
+                <View
+                    android:id="@+id/Divide1"
+                    app:layout_constraintTop_toBottomOf="@+id/HeadName"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/Secondary"/>
+
+                //Phone
+                <TextView
+                    android:id="@+id/dis_phone"
+                    app:layout_constraintTop_toBottomOf="@+id/Divide1"
+                    app:layout_constraintStart_toStartOf="@+id/dis_name"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone"
+                    android:fontFamily="@font/staatliches_regular"
+                    android:textAlignment="center"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/HeadNumber"
+                    app:layout_constraintTop_toBottomOf="@+id/dis_phone"
+                    app:layout_constraintStart_toStartOf="@+id/dis_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Contact"
+                    android:textAlignment="center"
+                    android:textColor="@color/quantum_black_text"
+                    android:textSize="16sp" />
+
+                // View
+                <View
+                    android:id="@+id/Divide3"
+                    app:layout_constraintTop_toBottomOf="@+id/HeadNumber"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/Secondary"/>
+
+                //DOB
+                <TextView
+                    android:id="@+id/dis_DOB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/dis_name"
+                    android:fontFamily="@font/staatliches_regular"
+                    android:text="DOB"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@+id/Divide3" />
+
+                <TextView
+                    android:id="@+id/DisDOB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dis_DOB"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/roboto"
+                    android:text="Date of Birth"
+                    android:textAlignment="center"
+                    android:textColor="@color/quantum_black_text"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/dis_name"
+                    app:layout_constraintTop_toBottomOf="@+id/dis_DOB" />
+
+                // View
+                <View
+                    android:id="@+id/Divide4"
+                    app:layout_constraintTop_toBottomOf="@+id/DisDOB"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/Secondary"/>
+
+                //Mail
+                <TextView
+                    android:id="@+id/dis_Mail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/staatliches_regular"
+                    android:text="Mail"
+                    app:layout_constraintStart_toStartOf="@+id/dis_name"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@+id/Divide4" />
+
+                <TextView
+                    android:id="@+id/MailDis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dis_Mail"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/roboto"
+                    android:text="E -Mail"
+                    app:layout_constraintStart_toStartOf="@+id/dis_name"
+                    android:textAlignment="center"
+                    android:textColor="@color/quantum_black_text"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@+id/dis_Mail" />
+
+                // View
+                <View
+                    android:id="@+id/Divide5"
+                    app:layout_constraintTop_toBottomOf="@+id/MailDis"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/Secondary"/>
+
+                //Change Address
+                <TextView
+                    android:id="@+id/dis_Address1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/staatliches_regular"
+                    android:text="address"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="@+id/dis_name"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@+id/Divide5" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dis_Address1"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/roboto"
+                    android:text="Address"
+                    app:layout_constraintStart_toStartOf="@+id/dis_name"
+                    android:textAlignment="center"
+                    android:textColor="@color/quantum_black_text"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@+id/dis_Address1" />
+
+                // View
+                <View
+                    android:id="@+id/Divide6"
+                    app:layout_constraintTop_toBottomOf="@+id/textView"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/Secondary"/>
+
+                //Logout
+                <Button
+                    android:id="@+id/logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/button_design"
+                    android:fontFamily="@font/nova_flat"
+                    android:onClick="logout"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:text="Logout"
+                    android:textColor="#FEFFFF"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Divide6"
+                    tools:ignore="OnClick" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    //Loading
+    <RelativeLayout
+        android:id="@+id/Loading_animationView"
+        android:layout_width="5dp"
+        android:layout_height="7dp"
+        android:visibility="gone">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="loading.json"
+            app:lottie_loop="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

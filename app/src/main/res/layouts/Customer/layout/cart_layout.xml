@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    app:cardCornerRadius="12dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    app:cardElevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+             <ImageView
+                    android:id="@+id/cart_item_Count"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="80dp"
+                    android:scaleType="fitCenter"
+                    android:layout_height="80dp"/>
+
+             <TextView
+                android:id="@+id/cart_item_name"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cart_item_Count"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Name"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textColor="@color/quantum_black_text"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+             <TextView
+                android:id="@+id/PlateDis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Size"
+                android:visibility="gone"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/cart_item_name"
+                 app:layout_constraintTop_toTopOf="@+id/cart_item_Price"
+                 app:layout_constraintBottom_toBottomOf="@+id/cart_item_Price"
+                app:layout_constraintEnd_toStartOf="@+id/cart_item_Price"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textColor="@color/quantum_black_text"
+                android:textAlignment="center"/>
+
+             <TextView
+            android:id="@+id/cart_item_Price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="100"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/quantum_black_text"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:drawableStartCompat="@drawable/currency_inr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cart_item_Count"
+            app:layout_constraintTop_toBottomOf="@+id/cart_item_name" />
+
+             <View
+                android:id="@+id/lineHai"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cart_item_Count"
+                android:layout_marginBottom="10dp"
+                android:layout_height="2dp"
+                android:background="@color/quantum_grey700"/>
+
+             <RelativeLayout
+                     android:id="@+id/layplusMinus"
+                     android:layout_width="wrap_content"
+                     android:background="@drawable/rectangle_white"
+                     android:elevation="8dp"
+                     android:layout_marginTop="5dp"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toBottomOf="@+id/lineHai"
+                     android:layout_marginStart="10dp"
+                     android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/ListDecrease"
+                android:padding="9dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/flag_transparent"
+                android:src="@drawable/baseline_remove_circle_outline_black_24dp"/>
+
+            <TextView
+                android:id="@+id/ListItemCount"
+                android:layout_width="@android:dimen/app_icon_size"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/ListDecrease"
+                android:text="1"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="@color/quantum_black_100"
+                android:layout_centerVertical="true"/>
+
+            <ImageButton
+                android:id="@+id/ListIncrease"
+                android:layout_toEndOf="@+id/ListItemCount"
+                android:layout_width="wrap_content"
+                android:padding="9dp"
+                android:background="@drawable/flag_transparent"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_add_circle_outline_black_24dp"/>
+
+        </RelativeLayout>
+
+             <ImageView
+            android:id="@+id/DeleteFromCart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/layplusMinus"
+            app:layout_constraintBottom_toBottomOf="@+id/layplusMinus"
+            android:layout_width="@android:dimen/app_icon_size"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:src="@android:drawable/ic_menu_delete"
+            app:tint="@color/quantum_black_100" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+
+

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/Secondary"
+    android:paddingTop="10dp"
+    android:layout_height="match_parent"
+    tools:ignore="ExtraText">
+
+    //Back
+    <ImageButton
+        android:id="@+id/Cancel"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@drawable/back_button_state"
+        android:src="@drawable/arrow_forward"
+        android:rotation="180"
+        android:transitionName="transition_back"
+        app:tint="@color/White" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="3dp"
+        android:padding="14dp"
+        android:layout_marginEnd="3dp"
+        android:background="@drawable/rectangle_white"
+        android:layout_below="@+id/Cancel"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="ExtraText">
+
+            //Text
+
+            <TextView
+                android:id="@+id/Gpdgg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Edit Profile"
+                android:textAllCaps="true"
+                android:textColor="@color/design_default_color_on_secondary"
+                android:textSize="40sp"
+                android:fontFamily="@font/staatliches_regular"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:transitionName="transition_title_text"/>
+
+            // Image View
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/Profileimage1"
+                app:layout_constraintTop_toBottomOf="@+id/Gpdgg"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/user"
+                app:civ_border_color="#FFFFFF"
+                app:civ_border_width="2dp" />
+
+            //Change Photo
+            <Button
+                android:id="@+id/PhotoAdd1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_design"
+                android:drawableEnd="@drawable/set"
+                android:drawableTint="@color/White"
+                android:gravity="center"
+                android:text="Change Photo"
+                android:textColor="@color/White"
+                app:layout_constraintBottom_toBottomOf="@+id/Profileimage1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Profileimage1"
+                app:layout_constraintTop_toTopOf="@+id/Profileimage1" />
+
+            //Name Done
+            <EditText
+                    android:id="@+id/EditName_Type"
+                    android:padding="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/Profileimage1"
+                    app:layout_constraintStart_toEndOf="@+id/barrier"
+                    android:layout_marginTop="15dp"
+                    android:maxLines="1"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:background="@drawable/edittext_back"
+                    android:textSize="16sp"
+                    android:layout_width="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_height="wrap_content" />
+
+            //Phone
+
+            <TextView
+                android:id="@+id/EditPhone_Type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_back"
+                android:maxLines="1"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                app:layout_constraintStart_toEndOf="@+id/barrier"
+                android:textColor="@color/design_default_color_on_secondary"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/EditName_Type" />
+
+            //Email
+
+
+            <EditText
+                android:id="@+id/EditEmail_Type"
+                android:text="Not Provided."
+                android:layout_width="0dp"
+                android:paddingStart="12dp"
+                android:maxLines="1"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toEndOf="@+id/barrier"
+                app:layout_constraintTop_toBottomOf="@+id/EditPhone_Type"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/edittext_back"
+                android:padding="10dp"
+                android:paddingEnd="12dp"
+                android:textColor="@color/design_default_color_on_secondary"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"/>
+
+            //Address
+
+            <TextView
+                android:id="@+id/EditAddress_Type"
+                android:paddingStart="12dp"
+                android:background="@drawable/edittext_back"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toEndOf="@+id/barrier"
+                app:layout_constraintTop_toBottomOf="@+id/EditEmail_Type"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="16sp"
+                android:paddingEnd="0dp"
+                android:textColor="@color/design_default_color_on_secondary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            //DOB Done
+
+            //Date
+
+            <TextView
+                android:id="@+id/EditDOB_Type"
+                android:layout_width="0dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:background="@drawable/edittext_back"
+                android:padding="10dp"
+                android:textColor="@color/quantum_black_text"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toEndOf="@+id/barrier"
+                app:layout_constraintTop_toBottomOf="@+id/EditAddress_Type"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="wrap_content"/>
+
+            //Change Password
+
+            <TextView
+                android:id="@+id/StarPass"
+                android:paddingStart="12dp"
+                android:background="@drawable/edittext_back"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:text="************"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toEndOf="@+id/barrier"
+                app:layout_constraintTop_toBottomOf="@+id/EditDOB_Type"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textAlignment="center"
+                android:paddingEnd="0dp"
+                android:textColor="@color/design_default_color_on_secondary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            //Cancel Button
+            <Button
+                android:id="@+id/DialogCancel"
+                android:textAlignment="center"
+                android:layout_marginTop="40dp"
+                app:layout_constraintTop_toBottomOf="@+id/StarPass"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/DialogSave"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:background="@drawable/button_design"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                android:text="Cancel"/>
+
+            //Save Button
+            <Button
+                android:id="@+id/DialogSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/DialogCancel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/DialogCancel"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:background="@drawable/button_design"
+                android:text="Save"/>
+
+            <TextView
+                android:id="@+id/EditDOB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DOB :"
+                android:textColor="@color/quantum_black_text"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/barrier"
+                app:layout_constraintBottom_toBottomOf="@+id/EditDOB_Type"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/EditDOB_Type" />
+
+            <TextView
+                android:id="@+id/Password_Change1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password :"
+                android:textColor="@color/quantum_black_text"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/barrier"
+                app:layout_constraintBottom_toBottomOf="@+id/StarPass"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/StarPass" />
+
+            <TextView
+                android:id="@+id/EditEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Email :"
+                app:layout_constraintEnd_toEndOf="@+id/barrier"
+                android:textColor="@color/quantum_black_text"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/EditEmail_Type"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/EditEmail_Type" />
+
+            <TextView
+                android:id="@+id/EditName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Name :"
+                android:textColor="@color/quantum_black_text"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/barrier"
+                app:layout_constraintBottom_toBottomOf="@+id/EditName_Type"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/EditName_Type" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="end"
+                app:constraint_referenced_ids="Password_Change1,EditEmail,EditName"
+                tools:layout_editor_absoluteX="398dp" />
+
+            <TextView
+                android:id="@+id/EditAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address :"
+                app:layout_constraintEnd_toEndOf="@+id/barrier"
+                android:textColor="@color/quantum_black_text"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/EditAddress_Type"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/EditAddress_Type" />
+
+            <TextView
+                android:id="@+id/EditPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone :"
+                app:layout_constraintEnd_toEndOf="@+id/barrier"
+                android:textColor="@color/quantum_black_text"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/EditPhone_Type"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/EditPhone_Type" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

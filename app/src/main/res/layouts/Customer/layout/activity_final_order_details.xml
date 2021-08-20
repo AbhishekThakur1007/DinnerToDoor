@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Secondary"
+    android:paddingTop="10dp"
+    tools:context=".UserSide.TotalItems.FinalOrderDetails"
+    tools:ignore="ExtraText">
+
+    //Back
+    <ImageButton
+        android:id="@+id/finalDetails_back"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@drawable/back_button_state"
+        android:src="@drawable/arrow_forward"
+        android:rotation="180"
+        android:transitionName="transition_back"
+        app:tint="@color/White" />
+
+    // Heading
+    <RelativeLayout
+        android:id="@+id/OrderHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/staatliches_regular"
+            android:text="Order Details"
+            android:textColor="@color/White"
+            android:textAlignment="center"
+            android:textSize="40sp" />
+
+    </RelativeLayout>
+
+    // List
+    <RelativeLayout
+        android:id="@+id/listFood"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/OrderHeading"
+        android:layout_above="@+id/Checkout"
+        android:background="@drawable/profile_down"
+        android:paddingTop="20dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical"
+            android:focusableInTouchMode="true"
+            android:id="@+id/listCart"/>
+
+
+    </RelativeLayout>
+
+    // Check Out
+    <RelativeLayout
+        android:id="@+id/Checkout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/primary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:background="@drawable/rectangle_white"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <RelativeLayout
+                    android:id="@+id/Details"
+                    android:layout_alignStart="@+id/AlignCheck"
+                    android:layout_alignEnd="@+id/AlignCheck"
+                    android:layout_width="wrap_content"
+                    android:padding="5dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total: "
+                            android:id="@+id/TotalAmo"
+                            android:fontFamily="@font/staatliches_regular"
+                            android:textColor="@color/quantum_black_text"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:id="@+id/Total"
+                            android:layout_toEndOf="@+id/TotalAmo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:fontFamily="@font/staatliches_regular"
+                            android:textColor="@color/quantum_black_text"
+                            android:textSize="20sp"/>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/AlignCheck"
+                    android:layout_below= "@id/Details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/button_state_default">
+
+                    <Button
+                        android:id="@+id/placeOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_design"
+                        android:elevation="10dp"
+                        android:text="Checkout"
+                        android:textColor="@color/White"
+                        android:textSize="15sp"
+                        android:transitionName="transition_next_btn" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

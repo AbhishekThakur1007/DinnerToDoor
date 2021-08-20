@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:background="@drawable/flag_transparent"
+    android:elevation="12dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:background="@drawable/button_border_payment"
+        android:layout_height="wrap_content"
+        tools:ignore="ExtraText">
+
+        //Status
+        <RelativeLayout
+            android:id="@+id/StatusHai"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/Spinner_status"
+                    android:textSize="20sp"
+                    android:textColor="@color/design_default_color_on_secondary"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/staatliches_regular"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Status :"/>
+
+                <TextView
+                    android:id="@+id/aaja"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/Spinner_status"
+                    android:fontFamily="@font/staatliches_regular"
+                    android:textColor="@color/quantum_black_text"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/StatusHai"
+            android:layout_height="2dp"
+            android:background="@color/quantum_black_text"/>
+
+        //Details
+        <RelativeLayout
+            android:id="@+id/Profile_Details"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/StatusHai">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:id="@+id/Order_photo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/user"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="5dp"
+                app:tint="@color/Secondary" />
+
+            <TextView
+                android:id="@+id/Order_Person"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/staatliches_regular"
+                android:textAlignment="center"
+                android:textColor="@color/design_default_color_on_secondary"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/Order_photo"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/Amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Order_Person"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/quantum_black_text"
+                android:fontFamily="@font/staatliches_regular"
+                android:layout_marginEnd="5dp"
+                android:layout_toStartOf="@+id/CallUser"
+                android:layout_toEndOf="@+id/Order_photo"
+                android:textSize="20sp"/>
+
+            <View
+                android:id="@+id/margin2"
+                android:layout_width="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toStartOf="@+id/CallUser"
+                android:layout_toEndOf="@+id/Order_photo"
+                android:layout_below="@+id/Amount"
+                android:layout_height="1dp"
+                android:background="@color/quantum_black_text"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/nova_flat"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/quantum_black_text"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/Order_photo"
+                android:layout_below="@+id/margin2"
+                android:id="@+id/Order_phone"/>
+
+            <ImageButton
+                android:id="@+id/CallUser"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/button_state_default"
+                android:padding="6dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_phone_24"
+                app:tint="@color/White" />
+
+            <TextView
+                android:id="@+id/Payment_Status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:fontFamily="@font/nova_flat"
+                android:textAlignment="center"
+                android:layout_below="@+id/Order_phone"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toEndOf="@+id/Order_photo"
+                android:textColor="@color/quantum_black_text"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,122 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:background="@drawable/dialog_outline"
+    android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/profifleheul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anton"
+            android:layout_marginBottom="20dp"
+            android:text="Select Profile Photo"
+            android:textAlignment="center"
+            android:textSize="30sp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ImagePreview"
+            android:layout_below="@+id/profifleheul"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:visibility="gone"
+            android:fitsSystemWindows="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/user"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="3dp"/>
+
+     <RelativeLayout
+        android:layout_below="@+id/ImagePreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/Remove"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove Photo"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/White"
+            android:background="@drawable/button_border_payment"/>
+
+        <RelativeLayout
+            android:layout_below="@+id/Remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <Button
+                android:id="@+id/CameraJaa"
+                android:layout_width="wrap_content"
+                android:text="Camera"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/button_design"
+                android:drawableTop="@drawable/camera"
+                android:textColor="@color/White"
+                android:layout_height="wrap_content"
+                android:elevation="8dp"/>
+
+             <Button
+                 android:id="@+id/GalleryJaa"
+                 android:layout_toEndOf="@+id/CameraJaa"
+                 android:layout_width="wrap_content"
+                 android:text="Gallery"
+                 android:layout_marginStart="10dp"
+                 android:background="@drawable/button_design"
+                 android:textColor="@color/White"
+                 android:layout_height="wrap_content"
+                 android:drawableTop="@drawable/gallery"/>
+
+        </RelativeLayout>
+
+        </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_below="@+id/ImagePreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/Gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Camera_photo"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/Camera_photo"
+            app:layout_constraintStart_toEndOf="@+id/Gallery"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_height="wrap_content"
+            android:text="Change"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

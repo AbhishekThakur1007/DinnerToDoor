@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="30dp"
+    android:background="@drawable/button_border_payment"
+    android:layout_marginEnd="30dp"
+    android:layout_marginTop="10dp"
+    android:elevation="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/SearchItemPhoto"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_width="80dp"
+            android:layout_centerVertical="true"
+            android:layout_height="80dp"
+            app:civ_border_color="@color/quantum_grey700"
+            app:civ_border_width="1dp"/>
+
+        <TextView
+            android:id="@+id/SearchDishName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_toEndOf="@+id/SearchItemPhoto"
+            android:fontFamily="@font/roboto"
+            android:text="Food Name"
+            android:textAlignment="center"
+            android:textColor="#121111"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/Available"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/SearchItemPhoto"
+            android:fontFamily="@font/roboto"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/SearchDishName"
+            android:textAlignment="center"
+            android:text="Availability"
+            android:textColor="@color/quantum_grey700"
+            android:textSize="18sp" />
+
+</RelativeLayout>

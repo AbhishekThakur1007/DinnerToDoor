@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingTop="5dp"
+    android:paddingBottom="12dp"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rectangle_white"
+    tools:ignore="ExtraText">
+
+    //Name
+    <TextView
+        android:id="@+id/MemName1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/staatliches_regular"
+        android:text="Name"
+        android:textAlignment="center"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/NameDis"
+        app:layout_constraintStart_toStartOf="@+id/MemName1"
+        app:layout_constraintTop_toBottomOf="@+id/MemName1"
+        android:layout_alignParentStart="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/roboto"
+        android:text="Name"
+        android:textAlignment="center"
+        android:textColor="@color/quantum_black_text"
+        android:textSize="16sp" />
+
+    <ImageButton
+        android:id="@+id/Delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/MemName1"
+        app:layout_constraintBottom_toBottomOf="@+id/NameDis"
+        android:background="@drawable/button_state_default"
+        android:padding="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/delete"
+        app:tint="@color/White" />
+
+    // View
+    <View
+        android:id="@+id/Divide3"
+        app:layout_constraintTop_toBottomOf="@+id/NameDis"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/Secondary"/>
+
+    //DOB
+    <TextView
+        android:id="@+id/MemNumber"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/MemName1"
+        app:layout_constraintTop_toBottomOf="@+id/Divide3"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Number"
+        android:fontFamily="@font/staatliches_regular"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/ContactDis"
+        app:layout_constraintStart_toStartOf="@+id/MemName1"
+        app:layout_constraintTop_toBottomOf="@+id/MemNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="Contact"
+        android:textAlignment="center"
+        android:textColor="@color/quantum_black_text"
+        android:textSize="16sp" />
+
+    <ImageButton
+        android:id="@+id/Call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/button_state_default"
+        android:padding="5dp"
+        android:src="@drawable/ic_baseline_phone_24"
+        app:layout_constraintBottom_toTopOf="@+id/Memage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/MemNumber"
+        app:tint="@color/White" />
+
+    // View
+    <View
+        android:id="@+id/Divide4"
+        app:layout_constraintTop_toBottomOf="@+id/ContactDis"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/Secondary"/>
+
+    //Age
+    <TextView
+        android:id="@+id/Memage"
+        app:layout_constraintTop_toBottomOf="@+id/Divide4"
+        app:layout_constraintStart_toStartOf="@+id/MemName1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="10 Years"
+        android:fontFamily="@font/staatliches_regular"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/AgeDis"
+        app:layout_constraintTop_toBottomOf="@+id/Memage"
+        app:layout_constraintStart_toStartOf="@+id/MemName1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/roboto"
+        android:text="Date of Birth"
+        android:textAlignment="center"
+        android:textColor="@color/quantum_black_text"
+        android:textSize="16sp" />
+
+    // View
+    <View
+        android:id="@+id/Divide5"
+        app:layout_constraintTop_toBottomOf="@+id/AgeDis"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/Secondary"/>
+
+    //Change Address
+    <TextView
+        android:id="@+id/MemAddress1"
+        app:layout_constraintStart_toStartOf="@+id/MemName1"
+        app:layout_constraintTop_toBottomOf="@+id/Divide5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="address"
+        android:fontFamily="@font/staatliches_regular"
+        android:textAlignment="center"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_below="@+id/MemAddress1"
+        app:layout_constraintStart_toStartOf="@+id/MemName1"
+        app:layout_constraintTop_toBottomOf="@+id/MemAddress1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="Address"
+        android:textAlignment="center"
+        android:textColor="@color/quantum_black_text"
+        android:textSize="16sp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

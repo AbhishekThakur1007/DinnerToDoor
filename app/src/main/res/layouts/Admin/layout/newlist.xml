@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/rectangle_white"
+    android:padding="10dp"
+    tools:ignore="ExtraText">
+
+    // Order Number
+    <TextView
+        android:id="@+id/HeadOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/staatliches_regular"
+        android:text="Order No."
+        android:textColor="@color/quantum_black_text"
+        android:textSize="@dimen/Default_text"
+        app:layout_constraintEnd_toStartOf="@+id/OrderID"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/OrderID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/staatliches_regular"
+        android:text="12334567"
+        android:textColor="@color/quantum_black_text"
+        android:textSize="@dimen/Default_text"
+        app:layout_constraintBottom_toBottomOf="@+id/HeadOrder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/HeadOrder"
+        app:layout_constraintTop_toTopOf="@+id/HeadOrder" />
+
+    // Name
+    <TextView
+        android:id="@+id/HeadName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/staatliches_regular"
+        android:text="Name : "
+        android:textColor="@color/quantum_black_text"
+        android:textSize="@dimen/Default_Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OrderID" />
+
+    <TextView
+        android:id="@+id/NewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/staatliches_regular"
+        android:text="Aniket"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintTop_toTopOf="@+id/HeadName"
+        android:textColor="@color/quantum_black_text"
+        android:textSize="@dimen/Default_Button"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="39dp" />
+
+    // Address
+    <TextView
+        android:id="@+id/HeaAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/staatliches_regular"
+        android:text="Address : "
+        android:layout_marginTop="5dp"
+        android:textColor="@color/quantum_black_text"
+        android:textSize="@dimen/Default_Button"
+        app:layout_constraintStart_toStartOf="@+id/HeadName"
+        app:layout_constraintTop_toBottomOf="@+id/HeadName" />
+
+    <TextView
+        android:id="@+id/NewAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        android:fontFamily="@font/staatliches_regular"
+        android:text="eneeenen"
+        android:textColor="@color/quantum_black_text"
+        android:textSize="@dimen/Default_Button"
+        app:layout_constraintTop_toTopOf="@+id/HeaAdd" />
+
+    // Phone
+    <TextView
+        android:id="@+id/Headphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/staatliches_regular"
+        android:text="Contact : "
+        android:layout_marginTop="5dp"
+        android:textColor="@color/quantum_black_text"
+        android:textSize="@dimen/Default_Button"
+        app:layout_constraintStart_toStartOf="@+id/HeadName"
+        app:layout_constraintTop_toBottomOf="@+id/HeaAdd" />
+
+    <TextView
+        android:id="@+id/NewPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/staatliches_regular"
+        android:text="999999999"
+        android:textColor="@color/quantum_black_text"
+        android:textSize="@dimen/Default_Button"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintTop_toTopOf="@+id/Headphone" />
+
+    // Total plus Mode
+    <TextView
+        android:id="@+id/HeadTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/staatliches_regular"
+        android:text="Total : "
+        android:textColor="@color/quantum_black_text"
+        android:textSize="@dimen/Default_Button"
+        app:layout_constraintStart_toStartOf="@+id/Headphone"
+        app:layout_constraintTop_toBottomOf="@+id/NewPhone" />
+
+    <TextView
+        android:id="@+id/TotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/HeadTotal"
+        android:layout_alignBottom="@+id/HeadTotal"
+        android:layout_toEndOf="@+id/HeadTotal"
+        android:fontFamily="@font/staatliches_regular"
+        android:text="222332"
+        android:textColor="@color/quantum_black_text"
+        android:textSize="@dimen/Default_Button"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintTop_toTopOf="@+id/HeadTotal" />
+
+    <View
+        android:id="@+id/divide"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="@color/quantum_black_text"
+        app:layout_constraintBottom_toBottomOf="@+id/HeadTotal"
+        app:layout_constraintStart_toEndOf="@+id/TotalAmount"
+        app:layout_constraintTop_toTopOf="@+id/HeadTotal" />
+
+    //Mode
+    <TextView
+        android:id="@+id/HeadMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/divide"
+        android:fontFamily="@font/staatliches_regular"
+        android:text="Mode : "
+        android:layout_marginStart="5dp"
+        android:textColor="@color/quantum_black_text"
+        android:textSize="@dimen/Default_Button"
+        app:layout_constraintStart_toEndOf="@+id/divide"
+        app:layout_constraintTop_toTopOf="@+id/HeadTotal" />
+
+    <TextView
+        android:id="@+id/Mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/HeadTotal"
+        android:layout_alignBottom="@+id/HeadTotal"
+        android:layout_toEndOf="@+id/HeadMode"
+        android:fontFamily="@font/staatliches_regular"
+        android:text="Cod"
+        android:textColor="@color/quantum_black_text"
+        android:textSize="@dimen/Default_Button"
+        app:layout_constraintStart_toEndOf="@+id/HeadMode"
+        app:layout_constraintTop_toTopOf="@+id/HeadMode" />
+
+    // Accept Or not
+    <TextView
+        android:id="@+id/HeadingLocButton11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/staatliches_regular"
+        android:gravity="center"
+        android:text="Accept Order? "
+        android:textColor="@color/Secondary"
+        android:textSize="@dimen/Large_text"
+        app:layout_constraintTop_toBottomOf="@+id/HeadMode" />
+
+    //No Button
+    <Button
+        android:id="@+id/NoOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_design"
+        android:elevation="10dp"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:text="No"
+        android:textColor="@color/design_default_color_surface"
+        android:textSize="15sp"
+        android:transitionName="transition_next_btn"
+        app:layout_constraintEnd_toStartOf="@+id/YesOrder"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HeadingLocButton11" />
+
+    //Yes Button
+    <Button
+        android:id="@+id/YesOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_design"
+        android:elevation="10dp"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:text="Yes"
+        android:textColor="@color/design_default_color_surface"
+        android:textSize="15sp"
+        android:transitionName="transition_next_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/NoOrder"
+        app:layout_constraintTop_toTopOf="@+id/NoOrder" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="HeadName,HeaAdd,Headphone,HeadTotal"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="45dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

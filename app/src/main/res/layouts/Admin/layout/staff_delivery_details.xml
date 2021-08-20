@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:padding="4dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/button_border_payment"
+    android:elevation="12dp"
+    tools:ignore="ExtraText">
+
+    //Status
+    <TextView
+        android:id="@+id/Spinner_status"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:layout_width="wrap_content"
+        android:fontFamily="@font/staatliches_regular"
+        android:layout_height="wrap_content"
+        android:text="Status :"
+        app:layout_constraintEnd_toStartOf="@+id/StatusOrder"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/StatusOrder"
+        android:text="Accepted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/staatliches_regular"
+        android:textColor="@color/quantum_black_text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Spinner_status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Spinner_status"
+        app:layout_constraintTop_toTopOf="@+id/Spinner_status"/>
+
+    <ImageView
+        android:id="@+id/greenTick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/check"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/Spinner_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Spinner_status"
+        app:tint="@color/quantum_googgreen800" />
+
+    <ImageView
+        android:id="@+id/redTick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/check"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/Spinner_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Spinner_status"
+        app:tint="@color/quantum_googred" />
+
+    <View
+        android:id="@+id/View1"
+        android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/Spinner_status"
+        android:layout_height="2dp"
+        android:background="@color/quantum_black_text"/>
+
+    //Details
+    <TextView
+        android:id="@+id/DeliveryPerson"
+        android:textSize="20sp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintStart_toStartOf="@+id/margin3"
+        app:layout_constraintTop_toBottomOf="@+id/View1"
+        android:textColor="@color/quantum_grey700"
+        android:layout_width="wrap_content"
+        android:fontFamily="@font/staatliches_regular"
+        android:layout_height="wrap_content"
+        android:text="Delivered by: "/>
+
+    <TextView
+        android:id="@+id/NameStaff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/barrier2"
+        app:layout_constraintTop_toTopOf="@+id/DeliveryPerson"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@color/quantum_black_text"
+        android:textSize="20sp" />
+
+    <View
+        android:id="@+id/margin3"
+        android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/DeliveryPerson"
+        android:layout_height="1dp"
+        android:background="@color/quantum_black_text"/>
+
+    //Address
+    <TextView
+        android:id="@+id/DeliveryAddHEad"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/staatliches_regular"
+        android:text="Address:"
+        android:textColor="@color/quantum_grey700"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/DeliveryPerson"
+        app:layout_constraintTop_toBottomOf="@+id/margin3" />
+
+    <TextView
+        android:id="@+id/AddressUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLength="40"
+        app:layout_constraintStart_toEndOf="@+id/barrier2"
+        app:layout_constraintTop_toTopOf="@+id/DeliveryAddHEad"
+        app:layout_constraintBottom_toBottomOf="@+id/DeliveryAddHEad"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@color/quantum_black_text"
+        android:textSize="20sp" />
+
+    //Details Orders
+    <View
+        android:id="@+id/margin4"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/DeliveryAddHEad"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_height="1dp"
+        android:background="@color/quantum_black_text"/>
+
+    //Name
+    <TextView
+        android:id="@+id/HeadName"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/staatliches_regular"
+        android:text="Name: "
+        android:textAlignment="center"
+        android:textColor="@color/quantum_grey700"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/DeliveryAddHEad"
+        app:layout_constraintTop_toBottomOf="@+id/margin4" />
+
+    <TextView
+        android:id="@+id/Order_Person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/barrier2"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/HeadName"
+        app:layout_constraintTop_toTopOf="@+id/HeadName" />
+
+    //Phone No
+    <TextView
+        android:id="@+id/Headphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/staatliches_regular"
+        android:text="Phone No. : "
+        android:textColor="@color/quantum_grey700"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/HeadName"
+        app:layout_constraintTop_toBottomOf="@+id/HeadName" />
+
+    //UserContact
+    <TextView
+        android:id="@+id/Contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textAlignment="textStart"
+        android:textColor="@color/quantum_black_text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Headphone"
+        app:layout_constraintStart_toEndOf="@+id/barrier2"
+        app:layout_constraintTop_toBottomOf="@+id/HeadName" />
+
+    <ImageButton
+        android:id="@+id/CallUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_state_default"
+        android:padding="6dp"
+        android:src="@drawable/ic_baseline_phone_24"
+        app:layout_constraintBottom_toTopOf="@+id/Order_phone"
+        app:layout_constraintEnd_toEndOf="@+id/margin4"
+        app:layout_constraintTop_toBottomOf="@+id/margin4"
+        app:tint="@color/White" />
+
+    // #3rd line
+    <View
+        android:id="@+id/margin2"
+        android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/Contact"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_height="1dp"
+        android:background="@color/quantum_black_text"/>
+
+    //Total
+    <TextView
+        android:id="@+id/Amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/staatliches_regular"
+        android:text="Total:  100"
+        android:textColor="@color/quantum_black_text"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/Headphone"
+        app:layout_constraintTop_toBottomOf="@+id/margin2" />
+
+    // #2 horizontal
+    <View
+        android:id="@+id/Hori"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@+id/Amount"
+        app:layout_constraintStart_toEndOf="@+id/barrier2"
+        app:layout_constraintBottom_toBottomOf="@+id/Amount"
+        android:layout_marginEnd="5dp"
+        android:background="@color/quantum_black_text"/>
+
+    // Delivery Mode
+    <TextView
+        android:id="@+id/Order_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/Amount"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/staatliches_regular"
+        android:text="Cash on Delivery"
+        android:textColor="@color/quantum_black_text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Amount"
+        app:layout_constraintStart_toEndOf="@+id/Hori"
+        app:layout_constraintTop_toTopOf="@+id/Amount" />
+
+    //Barrier
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="DeliveryPerson,DeliveryAddHEad,HeadName,Headphone"
+        tools:layout_editor_absoluteX="379dp"
+        tools:layout_editor_absoluteY="4dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

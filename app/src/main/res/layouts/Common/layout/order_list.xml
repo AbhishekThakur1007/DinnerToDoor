@@ -1,0 +1,111 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:id="@+id/food_Details"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/rectangle_white"
+    android:elevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="8sp"
+        android:padding="10dp"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/pakwaan_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:text="Dish:"
+            android:fontFamily="@font/roboto"
+            android:textSize="20sp"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:id="@+id/Pakwaan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/pakwaan_heading"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="PAkwaan kaa naam"
+            android:textColor="@color/quantum_black_text"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/Quan_heading"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/roboto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Pakwaan"
+            android:textSize="20sp"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:text="Quantity:"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:id="@+id/Quantity_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Pakwaan"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/Quan_heading"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="2"
+            android:textColor="@color/quantum_black_text"
+            android:textSize="20sp" />
+
+
+        <RelativeLayout
+            android:id="@+id/LaySizeOrdered"
+            android:layout_width="wrap_content"
+            android:layout_toEndOf="@+id/Quantity_item"
+            android:layout_below="@+id/Pakwaan"
+            android:layout_marginStart="10dp"
+            android:layout_alignTop="@+id/Quan_heading"
+            android:layout_alignBottom="@+id/Quan_heading"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/horizontalDivide"
+                android:layout_width="2dp"
+                android:layout_alignTop="@+id/SizeHead"
+                android:layout_alignBottom="@+id/SizeHead"
+                android:layout_height="2dp"
+                android:background="@color/quantum_black_text"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="2dp"/>
+
+
+            <TextView
+                android:id="@+id/SizeHead"
+                android:layout_toEndOf="@+id/horizontalDivide"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/quantum_black_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Size: " />
+
+            <TextView
+                android:id="@+id/Dish_Size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/SizeHead"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Half"
+                android:textColor="@color/quantum_black_text"
+                android:textSize="20sp" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

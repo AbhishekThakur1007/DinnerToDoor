@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AdminSide.FoodFragment.FoodListAdmin"
+    tools:ignore="ExtraText">
+
+    //Image plus Name
+    <RelativeLayout
+        android:id="@+id/AdminCategoryLayout"
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        //Image
+        <RelativeLayout
+            android:id="@+id/AdminTopHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/AdminfromUpToDown"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_height="195dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/LayHeading"
+            android:animateLayoutChanges="true"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/AdminTopHead"
+            android:layout_height="wrap_content">
+
+            //Name
+            <RelativeLayout
+                android:id="@+id/AdminTopNameHai"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/AdminnameTopFood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/passion_one_bold"
+                    android:padding="10dp"
+                    android:text="Name"
+                    android:textAlignment="center"
+                    android:textColor="@color/places_text_black_alpha_87"
+                    android:textSize="28sp" />
+
+            </RelativeLayout>
+
+            //Number
+            <RelativeLayout
+                android:id="@+id/LayNumberofItems"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp">
+
+                <TextView
+                    android:id="@+id/ItemCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/passion_one_bold"
+                    android:padding="5dp"
+                    android:layout_centerVertical="true"
+                    android:text="0"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/places_text_black_alpha_87" />
+
+                <TextView
+                    android:id="@+id/ItemCount1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/ItemCount"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/passion_one_bold"
+                    android:text="Items"
+                    android:textAlignment="center"
+                    android:textColor="@color/places_text_black_alpha_87"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+            </RelativeLayout>
+
+    //Search Bar
+    <RelativeLayout
+        android:id="@+id/AdminSearchAAja"
+        android:layout_below="@+id/AdminCategoryLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/flag_transparent">
+
+            //Food List
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/myView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:clipToPadding="false"
+                android:scrollbars="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/SearchAja"
+                android:background="@drawable/flag_transparent"
+                app:elevation="0dp">
+
+                <RelativeLayout
+                    android:id="@+id/LayTextFinal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    app:layout_scrollFlags="scroll|enterAlways">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/AdminSearchBoxXect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        app:boxBackgroundColor="@color/primary"
+                        app:boxBackgroundMode="outline"
+                        app:boxCornerRadiusTopEnd="7dp"
+                        app:boxCornerRadiusTopStart="7dp"
+                        app:boxStrokeColor="@color/quantum_black_secondary_text"
+                        app:boxStrokeWidth="2dp"
+                        app:endIconMode="clear_text"
+                        app:hintAnimationEnabled="true"
+                        app:hintEnabled="true"
+                        app:hintTextColor="@color/Button"
+                        app:startIconDrawable="@drawable/quantum_ic_search_grey600_24">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/AdminSearchBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:fontFamily="@font/roboto"
+                            android:hint="Search Food.."
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:padding="10dp"
+                            android:textColor="@color/places_text_black_alpha_87"
+                            android:textSize="18sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </RelativeLayout>
+
+    //Suggestion List
+    <RelativeLayout
+        android:id="@+id/AdminListVisibility"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/AdminSearchAAja"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="10dp"
+            android:id="@+id/AdminSearchList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+    //Add New
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/AddFood"
+        android:src="@drawable/upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_alignParentBottom="true"
+        android:padding="0dp"
+        android:scaleType="center"
+        app:borderWidth="2dp"
+        android:elevation="8dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/White"
+        android:clickable="true"
+        android:focusable="true"
+        android:tint="@color/material_on_background_emphasis_high_type"
+        app:backgroundTint="@color/defaultContentColor" />
+
+</RelativeLayout>

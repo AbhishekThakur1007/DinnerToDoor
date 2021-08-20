@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="standard_20">10dp</dimen>
+    <dimen name="standard_30">20dp</dimen>
+    <dimen name="standard_105">105dp</dimen>
+    <dimen name="HeadingDefault_40">40sp</dimen>
+    <dimen name="Default_Button">16sp</dimen>
+    <dimen name="Default_text">18sp</dimen>
+
+    <dimen name="HeadingLarge_60">60sp</dimen>
+    <dimen name="Large_Button">21sp</dimen>
+    <dimen name="Large_text">25sp</dimen>
+</resources>

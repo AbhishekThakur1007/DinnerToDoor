@@ -1,0 +1,163 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_margin="10dp"
+        android:padding="7dp"
+        android:background="@drawable/rectangle_white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="ExtraText">
+
+        // Name User
+        <TextView
+            android:id="@+id/DeliveryUserName"
+            android:layout_alignEnd="@+id/DeliveryAddUserName"
+            android:layout_alignParentStart="true"
+            android:textAlignment="center"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/staatliches_regular"
+            android:textColor="@color/quantum_black_text"
+            android:textSize="22sp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name: "/>
+
+        <TextView
+            android:id="@+id/USerName"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/DeliveryUserName"
+            android:fontFamily="@font/staatliches_regular"
+            android:textColor="@color/quantum_black_text"
+            android:textSize="22sp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Meenu  "/>
+
+        // Address User
+        <TextView
+            android:id="@+id/DeliveryAddUserName"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/staatliches_regular"
+            android:textColor="@color/quantum_black_text"
+            android:textSize="22sp"
+            android:layout_below="@+id/DeliveryUserName"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address: "/>
+
+        <TextView
+            android:id="@+id/USerAdd"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@+id/DeliveryAddUserName"
+            android:fontFamily="@font/staatliches_regular"
+            android:textColor="@color/quantum_black_text"
+            android:textSize="22sp"
+            android:layout_alignTop="@+id/DeliveryAddUserName"
+            android:layout_alignBottom="@+id/DeliveryAddUserName"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cscksac kslcacmlsamc nslkckaslcl nalkcksa dnalknca anaklsc"/>
+
+        // Phone User
+        <TextView
+            android:id="@+id/DeliveryPhoneUserName"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignEnd="@+id/DeliveryAddUserName"
+            android:layout_alignParentStart="true"
+            android:textAlignment="center"
+            android:fontFamily="@font/staatliches_regular"
+            android:textColor="@color/quantum_black_text"
+            android:textSize="22sp"
+            android:layout_below="@+id/DeliveryAddUserName"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact: "/>
+
+        <TextView
+            android:id="@+id/USerPhone"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@+id/DeliveryPhoneUserName"
+            android:fontFamily="@font/staatliches_regular"
+            android:textColor="@color/quantum_black_text"
+            android:textSize="22sp"
+            android:layout_alignTop="@+id/DeliveryPhoneUserName"
+            android:layout_alignBottom="@+id/DeliveryPhoneUserName"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="987654321"/>
+
+        // Cancel
+        <TextView
+            android:id="@+id/DeliveryByDetails"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/DeliveryPhoneUserName"
+            android:fontFamily="@font/staatliches_regular"
+            android:textColor="@color/quantum_black_text"
+            android:textSize="22sp"
+            android:layout_marginBottom="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel Pickup ?  "/>
+
+        <RadioGroup
+            android:id="@+id/DeliveryDetailSpinner"
+            android:background="@drawable/rectangle_white"
+            android:layout_alignBottom="@+id/DeliveryByDetails"
+            android:layout_alignTop="@+id/DeliveryByDetails"
+            android:layout_toEndOf="@+id/DeliveryByDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true" >
+
+            <RadioButton
+                android:id="@+id/yesCancel"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:textSize="16sp"
+                android:fontFamily="@font/staatliches_regular"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="Yes"/>
+
+            <RadioButton
+                android:id="@+id/noCancel"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:textSize="16sp"
+                android:fontFamily="@font/staatliches_regular"
+                android:layout_height="wrap_content"
+                android:text="No"/>
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

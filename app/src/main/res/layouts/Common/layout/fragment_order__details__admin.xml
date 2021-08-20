@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/Secondary"
+    android:paddingTop="10dp"
+    tools:context=".AdminSide.Order.OrderDetailsAdmin">
+
+    <ImageButton
+        android:id="@+id/limit_back"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/rectangle_white"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/ic_baseline_production_quantity_limits"
+        android:transitionName="transition_back"
+        app:tint="@color/quantum_black_text" />
+
+    <RelativeLayout
+        android:layout_below="@+id/limit_back"
+        android:layout_width="match_parent"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="@drawable/profile_down"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title_orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/staatliches_regular"
+            android:padding="10dp"
+            android:text="Orders"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="40sp"
+            android:transitionName="transition_title_text" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputSearch1"
+            android:layout_width="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_orders"
+            app:boxCornerRadiusTopStart="7dp"
+            app:boxCornerRadiusTopEnd="7dp"
+            app:hintAnimationEnabled="true"
+            app:boxStrokeColor="@color/Secondary"
+            app:hintTextColor="@color/Button"
+            app:boxStrokeWidth="2dp"
+            app:hintEnabled="true"
+            app:boxBackgroundColor="@color/primary"
+            app:boxBackgroundMode="outline"
+            app:startIconDrawable="@drawable/quantum_ic_search_grey600_24"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/SearchCart1"
+                android:layout_width="match_parent"
+                app:textInputLayoutFocusedRectEnabled="true"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:inputType="text"
+                android:imeOptions="actionDone"
+                android:focusable="true"
+                android:clickable="true"
+                android:hint="Search by Name.."
+                android:textSize="18sp"
+                android:textColor="@color/places_text_black_alpha_87"
+                android:fontFamily="@font/roboto"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/NoOrder"
+            android:layout_below="@+id/textInputSearch1"
+            android:layout_margin="5dp"
+            android:visibility="gone"
+            android:text="No Orders"
+            android:textSize="30sp"
+            android:fontFamily="@font/staatliches_regular"
+            android:gravity="center"
+            android:textColor="@color/quantum_black_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/recyclerDodge"
+            android:layout_below="@+id/textInputSearch1"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Order_status"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_dodgeInsetEdges="bottom"/>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

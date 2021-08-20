@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Secondary"
+    android:paddingTop="10dp"
+    tools:ignore="ExtraText">
+
+    //Back
+    <ImageButton
+        android:id="@+id/sign_back4"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@drawable/back_button_state"
+        android:src="@drawable/arrow_forward"
+        android:rotation="180"
+        android:transitionName="transition_back"
+        app:tint="@color/White" />
+
+    <RelativeLayout
+        android:layout_below="@+id/sign_back4"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:paddingTop="30dp"
+        android:fillViewport="true"
+        android:background="@drawable/profile_down"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="40dp"
+            android:layout_height="match_parent">
+
+            //Text
+            <TextView
+                android:id="@+id/Gpdgg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/select"
+                android:textAllCaps="true"
+                android:textColor="@color/design_default_color_on_secondary"
+                android:textSize="@dimen/HeadingDefault_40"
+                android:fontFamily="@font/staatliches_regular"
+                android:textAlignment="center"
+                android:transitionName="transition_title_text"/>
+
+            // Map
+            <fragment
+                android:id="@+id/MapSearch"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/Gpdgg"/>
+
+            <SearchView
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="@+id/MapSearch"
+                android:layout_marginEnd="30dp"
+                android:id="@+id/sv_Location"
+                android:queryHint="Search your Location"
+                android:iconifiedByDefault="false"
+                android:elevation="5dp"
+                android:background="@drawable/rectangle_white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            //Set Automatically
+            <ImageButton
+                android:id="@+id/SetAuto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/LayAddEdit"
+                android:layout_marginBottom="15dp"
+                android:layout_marginEnd="25dp"
+                android:scaleY="1.6"
+                android:scaleX="1.6"
+                android:visibility="gone"
+                android:src="@drawable/ic_baseline_gps_fixed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/flag_transparent"
+                app:tint="@color/quantum_black_text"
+                android:tintMode="src_atop"/>
+
+            //Edit Text For Address
+            <RelativeLayout
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:padding="15dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/LayAddEdit"
+                android:background="@drawable/rectangle_white"
+                android:layout_height="wrap_content">
+
+                //Type Address
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/plz1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:hint="House Address"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="20dp"
+                    app:boxCornerRadiusTopStart="5dp"
+                    app:boxCornerRadiusTopEnd="5dp"
+                    app:boxCornerRadiusBottomStart="5dp"
+                    app:boxCornerRadiusBottomEnd="5dp"
+                    app:boxStrokeColor="@color/design_default_color_on_secondary"
+                    app:boxStrokeWidthFocused="1dp"
+                    app:startIconDrawable="@drawable/ic_baseline_location_house"
+                    app:startIconTint="@color/design_default_color_on_secondary"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/design_default_color_on_secondary"
+                    app:hintTextColor="@color/cardview_dark_background">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/HomeAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="sans-serif-black"
+                        android:inputType="text"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                        android:textColorHint="@color/common_google_signin_btn_text_dark_focused" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                //Type Village
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/plz2"
+                    android:layout_below="@+id/plz1"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="20dp"
+                    app:boxCornerRadiusTopStart="5dp"
+                    app:boxCornerRadiusTopEnd="5dp"
+                    app:boxCornerRadiusBottomStart="5dp"
+                    app:boxCornerRadiusBottomEnd="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:hint="Village "
+                    app:boxStrokeColor="@color/design_default_color_on_secondary"
+                    app:boxStrokeWidthFocused="1dp"
+                    app:startIconDrawable="@drawable/home"
+                    app:startIconTint="@color/design_default_color_on_secondary"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/design_default_color_on_secondary"
+                    app:hintTextColor="@color/cardview_dark_background">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/Village"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="sans-serif-black"
+                        android:inputType="text"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                        android:textColorHint="@color/common_google_signin_btn_text_dark_focused" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                //Next Button
+                 <Button
+                        android:id="@+id/NextMap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/plz2"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginEnd="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/button_design"
+                        android:elevation="10dp"
+                        android:text="Save Address"
+                        android:textColor="@color/design_default_color_surface"
+                        android:textSize="@dimen/Default_Button"
+                        android:transitionName="transition_next_btn" />
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pro"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true" />
+
+</RelativeLayout>
+

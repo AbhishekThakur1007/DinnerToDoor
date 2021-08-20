@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="10dp"
+    android:background="@color/Secondary"
+    tools:ignore="ExtraText">
+
+    //Back
+    <ImageButton
+        android:id="@+id/NewItem3"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@drawable/back_button_state"
+        android:src="@drawable/arrow_forward"
+        android:rotation="180"
+        android:transitionName="transition_back"
+        app:tint="@color/White"/>
+
+    //Cancel
+    <ImageButton
+        android:id="@+id/Cancel3"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@drawable/back_button_state"
+        android:src="@drawable/cross"
+        android:rotation="180"
+        android:transitionName="transition_back"
+        app:tint="@color/White"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:paddingStart="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="10dp"
+        android:fillViewport="true"
+        android:background="@drawable/profile_down"
+        android:layout_below="@+id/NewItem3"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            //Heading Upload
+            <TextView
+                android:id="@+id/NewHeaing3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:fontFamily="@font/staatliches_regular"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/design_default_color_on_secondary"
+                android:textSize="@dimen/HeadingDefault_40"
+                android:transitionName="transition_title_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            // Image Display
+            <TextView
+                android:id="@+id/NoImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                app:layout_constraintTop_toBottomOf="@+id/NewHeaing3"
+                android:background="@drawable/rectangle_white"
+                android:gravity="center"
+                android:textColor="@color/quantum_black_100"
+                android:fontFamily="@font/roboto"
+                android:text="No Image Selected"/>
+
+            <ImageView
+                android:id="@+id/inspect_foodimage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintTop_toBottomOf="@+id/NewHeaing3" />
+
+            //Select
+             <Button
+                    android:id="@+id/button_select_food"
+                    app:layout_constraintTop_toBottomOf="@+id/NewHeaing3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="270dp"
+                    android:background="@drawable/button_design"
+                    android:elevation="10dp"
+                    android:text="Select"
+                    android:textColor="@color/design_default_color_surface"
+                    android:textSize="15sp"
+                    android:transitionName="transition_next_btn" />
+
+            // Upload Data
+            <Button
+                android:id="@+id/UploadFinal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_design"
+                android:drawableTint="@color/White"
+                android:elevation="10dp"
+                android:text="Upload Data"
+                android:textAlignment="center"
+                android:textColor="@color/design_default_color_surface"
+                android:textSize="15sp"
+                android:transitionName="transition_next_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_select_food" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

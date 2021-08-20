@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/Secondary"
+    android:paddingTop="10dp"
+    tools:ignore="ExtraText">
+
+    //Back
+    <ImageButton
+        android:id="@+id/Edit_Food_Dialog"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@drawable/back_button_state"
+        android:src="@drawable/arrow_forward"
+        android:rotation="180"
+        android:transitionName="transition_back"
+        app:tint="@color/White"/>
+
+    <ScrollView
+        android:layout_below="@+id/Edit_Food_Dialog"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:paddingTop="20dp"
+        android:fillViewport="true"
+        android:background="@drawable/profile_down"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="50dp">
+
+            <Button
+                android:id="@+id/food_select1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_design"
+                android:elevation="10dp"
+                android:padding="10dp"
+                android:text="Change Image"
+                android:textAllCaps="false"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="@dimen/Default_Button"
+                android:layout_marginTop="270dp"
+                app:layout_constraintEnd_toEndOf="@+id/NewCatLay"
+                app:layout_constraintStart_toStartOf="@+id/NewCatLay"
+                app:layout_constraintTop_toBottomOf="@+id/NewCatLay" />
+
+            <Button
+                android:id="@+id/No"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button_design"
+                android:elevation="10dp"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp"
+                android:text="Cancel"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="@dimen/Default_Button"
+                app:layout_constraintEnd_toStartOf="@+id/Yes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/food_select1" />
+
+            //Image Display
+
+            <Button
+                android:id="@+id/Yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_design"
+                android:elevation="10dp"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp"
+                android:text="Upload"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="@dimen/Default_Button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/No"
+                app:layout_constraintTop_toTopOf="@+id/No" />
+
+            //Next
+            <ImageView
+                android:id="@+id/change_image_final"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_margin="10dp"
+                android:scaleType="center"
+                app:layout_constraintEnd_toEndOf="@+id/NewCatLay"
+                app:layout_constraintStart_toStartOf="@+id/NewCatLay"
+                app:layout_constraintTop_toBottomOf="@+id/NewCatLay" />
+
+            <TextView
+                android:id="@+id/dynamicHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/staatliches_regular"
+                android:textAlignment="center"
+                android:textColor="@color/material_on_background_emphasis_high_type"
+                android:textSize="@dimen/HeadingDefault_40"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/NewCatLay"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Change Name"
+                app:boxStrokeColor="@color/design_default_color_on_secondary"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/design_default_color_on_secondary"
+                app:hintTextColor="@color/cardview_dark_background"
+                app:layout_constraintTop_toBottomOf="@+id/dynamicHeading"
+                app:startIconDrawable="@drawable/restaurant_menu"
+                app:startIconTint="@color/design_default_color_on_secondary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/foodEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-black"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textColorHint="@color/quantum_grey700" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

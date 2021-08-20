@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Secondary"
+    android:paddingTop="10dp"
+    tools:context=".Login.signup2"
+    android:transitionName="transition_login"
+    tools:ignore="ExtraText">
+
+    //Back
+    <ImageButton
+        android:id="@+id/sign_back"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@drawable/back_button_state"
+        android:src="@drawable/arrow_forward"
+        android:rotation="180"
+        android:transitionName="transition_back"
+        app:tint="@color/White" />
+
+    <ScrollView
+        android:layout_below="@+id/sign_back"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:paddingTop="30dp"
+        android:fillViewport="true"
+        android:background="@drawable/profile_down"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="40dp"
+            android:paddingBottom="50dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/FoodSignUpPhoto"
+                android:layout_marginTop="35dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            //Create Title
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/FoodSignUpPhoto"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:fontFamily="@font/staatliches_regular"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/Sign_up"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/design_default_color_on_secondary"
+                android:textSize="@dimen/HeadingDefault_40"
+                android:transitionName="transition_title_text" />
+
+            //Full Name
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fullname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/title_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginTop="20dp"
+                android:hint="@string/name"
+                app:boxStrokeColor="@color/design_default_color_on_secondary"
+                app:boxStrokeWidthFocused="2dp"
+                app:startIconDrawable="@drawable/name"
+                app:startIconTint="@color/design_default_color_on_secondary"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/design_default_color_on_secondary"
+                app:hintTextColor="@color/cardview_dark_background">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fullname14"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-black"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textColorHint="@color/quantum_grey700" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            //E-mail
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/fullname"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginTop="10dp"
+                android:hint="@string/email"
+                app:hintTextColor="@color/cardview_dark_background"
+                app:boxStrokeColor="@color/design_default_color_on_secondary"
+                app:boxStrokeWidthFocused="2dp"
+                app:startIconDrawable="@drawable/email"
+                app:startIconTint="@color/design_default_color_on_secondary"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/design_default_color_on_secondary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/mail1"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-black"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/design_default_color_on_secondary"
+                    android:textColorHint="@color/design_default_color_on_secondary" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            //Password
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password1"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/mail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:hint="@string/password"
+                app:boxStrokeColor="@color/design_default_color_on_secondary"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="password_toggle"
+                app:endIconTint="@color/design_default_color_on_secondary"
+                app:hintTextColor="@color/cardview_dark_background"
+                app:startIconDrawable="@drawable/password"
+                app:startIconTint="@color/design_default_color_on_secondary"
+                android:layout_marginTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/password11"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-black"
+                    android:inputType="textPassword"
+                    android:imeOptions="actionGo"
+                    android:textColor="@color/design_default_color_on_secondary"
+                    android:textColorHint="@color/design_default_color_on_secondary" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            //Next
+            <Button
+                android:id="@+id/next1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/password1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/button_design"
+                android:elevation="10dp"
+                android:text="@string/next"
+                android:textColor="@color/design_default_color_surface"
+                android:textSize="@dimen/Default_Button"
+                android:transitionName="transition_next_btn" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
